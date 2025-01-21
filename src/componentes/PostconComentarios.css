@@ -1,0 +1,102 @@
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulario de creación de post y comentarios */
+.post-form,
+.comment-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post-form input,
+.comment-form textarea,
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.post-form button,
+.comment-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.post-form button:hover,
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para cada post */
+.post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+    font-size: 18px;
+}
+
+.post p {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.post small {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+/* Estilos para comentarios */
+.comment {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.comment p {
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.comment small {
+    color: #555
+}

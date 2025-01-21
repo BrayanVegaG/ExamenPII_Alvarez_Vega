@@ -31,14 +31,13 @@ const Navbar: React.FC<Props> = ({ onLogout, isLoggedIn, userRole }) => {
                     {userRole === "Publicador" && (
                         <>
                             <Link to="/posts">Posts</Link>
-                            <Link to="/comments">Comentarios</Link>
                         </>
                     )}
                     {userRole === "Administrador" && (
                         <>
                             <Link to="/users">Usuarios</Link>
+                            
                             <Link to="/posts">Posts</Link>
-                            <Link to="/comments">Comentarios</Link>
                         </>
                     )}
                     <button onClick={handleLogout}>Cerrar Sesión</button>

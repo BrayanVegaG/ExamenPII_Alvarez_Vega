@@ -6,9 +6,8 @@ import Register from "./componentes/Register";
 import Inicio from "./componentes/Home";
 import Contact from "./componentes/Contact";
 import "./App.css";
-import Posts from "./componentes/Posts";
-import Comments from "./componentes/Comments";
 import Users from "./componentes/Users";
+import PostsConComentarios from "./componentes/PostconComentarios";
 
 const App: React.FC = () => {
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -35,15 +34,15 @@ const App: React.FC = () => {
                 <Route path="/contact" element={<Contact />} />
                 {isLoggedIn && userRole === "Publicador" && (
                     <>
-                        <Route path="/posts" element={<Posts />} />
-                        <Route path="/comments" element={<Comments />} />
+                        <Route path="/posts" element={<PostsConComentarios />} />
+
                     </>
                 )}
                 {isLoggedIn && userRole === "Administrador" && (
                     <>
                         <Route path="/users" element={<Users />} />
-                        <Route path="/posts" element={<Posts />} />
-                        <Route path="/comments" element={<Comments />} />
+                        <Route path="/posts" element={<PostsConComentarios/>} />
+
                     </>
                 )}
                 <Route path="*" element={<Navigate to={isLoggedIn ? "/" : "/login"} />} />
