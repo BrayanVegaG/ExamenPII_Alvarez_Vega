@@ -1,0 +1,59 @@
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Lista de usuarios */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo para roles */
+li span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Hover en lista */
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para roles específicos */
+li span.role-admin {
+    color: #d9534f;
+}
+
+li span.role-user {
+    color: #5cb85c;
+}

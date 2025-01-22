@@ -83,10 +83,10 @@ const PostsConComentarios: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Posts con Comentarios</h2>
             {loggedUser.role !== "Administrador" && (
-                <div>
+                <div className="post-form">
                     <input
                         type="text"
                         placeholder="Título"
@@ -101,30 +101,30 @@ const PostsConComentarios: React.FC = () => {
                     <button onClick={handleCreatePost}>Crear Post</button>
                 </div>
             )}
-
+    
             <ul>
                 {posts?.map((post) => (
-                    <li key={post.id}>
+                    <li key={post.id} className="post">
                         <h3>{post.title}</h3>
                         <p>{post.content}</p>
                         <small>Autor: {post.author}</small>
-
+    
                         {loggedUser.role === "Administrador" && (
                             <button onClick={() => handleDeletePost(post.id)}>Eliminar Post</button>
                         )}
-
+    
                         <h4>Comentarios:</h4>
                         <ul>
                             {(post.comments || []).map((comment) => (
-                                <li key={comment.id}>
+                                <li key={comment.id} className="comment">
                                     <p>{comment.content}</p>
                                     <small>Autor: {comment.author}</small>
                                 </li>
                             ))}
                         </ul>
-
+    
                         {loggedUser.role !== "Administrador" && (
-                            <div>
+                            <div className="comment-form">
                                 <textarea
                                     placeholder="Escribe tu comentario"
                                     value={newComment.postId === post.id ? newComment.content : ""}
@@ -140,6 +140,7 @@ const PostsConComentarios: React.FC = () => {
             </ul>
         </div>
     );
+    
 };
 
 export default PostsConComentarios;

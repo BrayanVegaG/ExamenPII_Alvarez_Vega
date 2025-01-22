@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Users.css";
 
 interface User {
     username: string;
@@ -14,17 +15,19 @@ const Users: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h2>Usuarios Registrados</h2>
             <ul>
                 {users.map((user, index) => (
                     <li key={index}>
-                        {user.username} - {user.role}
+                        <span>{user.username}</span>
+                        <span className={`role-${user.role.toLowerCase()}`}>{user.role}</span>
                     </li>
                 ))}
             </ul>
         </div>
     );
+    
 };
 
 export default Users;
